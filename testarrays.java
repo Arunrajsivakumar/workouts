@@ -11,13 +11,6 @@ import com.fasterxml.jackson.annotation.JacksonInject.Value;
 
 public class testarrays {
 
-	public static void main(String[] args) {
-		// startArrays();
-		// revarrays();
-		//listarr();
-		list();
-	}
-
 	public void arrays() {
 
 		// TODO Auto-generated method stub
@@ -97,6 +90,64 @@ public class testarrays {
 		List<String> backendTeam = Arrays.asList(names);
 
 		backendTeam.contains("arunraj");
+	}
+
+	public static void numrev() {
+
+		// int[] a = { 0, 1, 2, 2, 25, 26, 30, 30, 45, 50, 65, 99, 99, 100 };
+
+		int a[] = { 1, 3, 3, 4, 2, 1, 5, 6, 7, 7, 8, 10 };
+		Arrays.sort(a);
+		int j = 0;
+		for (int i = 0; i < a.length - 1; i++) {
+			if (a[i] != a[i + 1]) {
+				a[j] = a[i];
+				j++;
+			}
+		}
+		a[j] = a[a.length - 1];
+		for (int i = 0; i <= j; i++) {
+			System.out.println(a[i]);
+		}
+
+	}
+
+	public static void strrev() {
+
+		String a = "em tset jarnura";
+		char[] ch = a.toCharArray();
+
+		for (int i = ch.length - 1; i >= 0; i--) {
+			// char c=a.charAt(i);//returns h
+
+			System.out.print(ch[i]);
+		}
+
+	}
+
+	public static void pattern1() {
+
+		int stars = 5;
+
+		for (int i = 0; i < stars; i++) {
+			System.out.print("* ");
+		}
+		for (int j = 0; j < stars; j++) {
+			System.out.println("#");
+		}
+	//	System.out.print("*");
+
+	}
+
+	public static void main(String[] args) {
+		// startArrays();
+		// revarrays();
+		// listarr();
+//		list();
+//		numrev();
+//		strrev();
+		pattern1();
+
 	}
 
 }
